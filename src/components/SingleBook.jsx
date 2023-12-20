@@ -24,15 +24,13 @@ class SingleBook extends React.Component {
         this.state = { isSelected : false }
     }
     handleClick = () => {
-        this.setState({ isSelected: !this.state.selected }) //non torna false ma diventa true
-        console.log("clic")
-        
+        this.setState({ isSelected: !this.state.isSelected }) //ad ogni clic diventa diverso da quello che è      
     }
 
     render(){
         return(
             <Col key={this.props.libroSingolo.asin}>
-            <Card style={{width: "12rem", border: this.state.isSelected? "3px solid red" : "none"}}
+            <Card style={{width: "12rem", boxShadow: this.state.isSelected? "0px 0px 10px black" : "none"}}
             onClick={this.handleClick}
             >
                 <Card.Img variant="top" src={this.props.libroSingolo.img} />
