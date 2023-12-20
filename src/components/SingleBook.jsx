@@ -24,13 +24,9 @@ class SingleBook extends React.Component {
         this.state = { isSelected : false }
     }
     handleClick = () => {
-        if(!this.isSelected){
-        this.setState({isSelected : true})  //non sta funzionando
-        console.log("era false")
-        }
-        else {
-            console.log("era true")
-        }
+        this.setState({ isSelected: !this.state.selected }) //non torna false ma diventa true
+        console.log("clic")
+        
     }
 
     render(){
