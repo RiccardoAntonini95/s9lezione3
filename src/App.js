@@ -13,7 +13,7 @@ function App() {
         <MyNav />
         <Welcome />
       </header>
-      <BookList listaLibri={history}/>
+      <BookList listaLibri={history} />
       <MyFooter />
     </div>
   );
